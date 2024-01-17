@@ -1,0 +1,16 @@
+.encabezado{
+    @apply h-xl flex justify-between shadow bg-white text-gray-800 relative;
+    
+}
+
+.contenedor{
+    @apply flex items-center;
+}
+
+.logo{
+    @apply mr-2 h-10 w-10;
+}
+
+.titulo{
+    @apply text-lg font-semibold text-gray-800 uppercase;
+}
