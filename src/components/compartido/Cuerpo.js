@@ -8,20 +8,20 @@ function Cuerpo({children}) {
       <div className={estilos.cuerpo}>
         <aside className={estilos.aside}>
           <Vinculo 
-          href='/lista' 
+          to='/lista' 
           texto='Mis Metas'
           Icono={ListaSVG}/>
           
 
           <Vinculo 
-          href='/crear' 
+          to='/nueva' 
           texto='Nueva Meta'
           Icono={NuevaSVG}/>
           
           
           
         </aside>
-        <main className='main'>
+        <main className={estilos.main}>
           {children}
         </main>
       </div>

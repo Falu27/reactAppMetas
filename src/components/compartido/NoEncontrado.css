@@ -1,0 +1,3 @@
+.NoEncontrado{
+    @apply shadow bg-gradient-to-r from-gray-700 to-white h-lg text-lg text-center pr-2 text-white relative shadow-xl;
+}

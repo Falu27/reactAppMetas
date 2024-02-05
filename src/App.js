@@ -1,18 +1,26 @@
-import './App.css';
-import Encabezado from './components/compartido/Encabezado';
-import Pie from './components/compartido/Pie';
-import Cuerpo from './components/compartido/Cuerpo';
-import Meta from './components/lista/Metas';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/compartido/Layout";
+import Lista from "./components/lista/Lista";
+import Detalles from "./components/nueva/Detalles";
+import NoEncontrado from "./components/compartido/NoEncontrado";
+import Modal from "./components/compartido/Modal";
 
 function App() {
   return (
-    <div className="App">
-      <Encabezado />
-      <Cuerpo> 
-        <Meta />
-      </Cuerpo>
-      <Pie />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+      <Route index element={<Lista/>} />
+      <Route path="/lista" element={<Lista />}>
+      <Route path="/lista/:id" element={
+      <Modal>
+        <Detalles />
+      </Modal>} />
+      </Route>
+      <Route path="/nueva" element={<Detalles />} />
+      <Route path="*" element={<NoEncontrado />} />
+      </Route>
+    </Routes>
   );
 }
 
